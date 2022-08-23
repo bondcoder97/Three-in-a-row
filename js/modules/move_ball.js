@@ -1,6 +1,4 @@
 // падение мяча
-// import {game} from './addBall.js';
-document.write('<script src="./js/modules/addBall.js"></script>');
 
 game.m.move_ball = function(){
 	if (game.status.clear == 2 && game.status.game && game.status.start_game){
@@ -24,7 +22,6 @@ game.m.move_ball = function(){
 			}
 		}
 		if (!game.status.ball) {
-			game.m.addBall();
 			game.m.boom();
 			if(game.status.find_row){
 				clearInterval(game.interval.interval_del);
