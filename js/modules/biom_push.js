@@ -39,7 +39,14 @@ game.m.biom_push = function(zz){
 				game.fild.biom_boom[i][j] = 0;
 			} else {
 				if(!game.fild.biom[i][j]) game.fild.biom[i][j]=0;
-				biom_fild +=`<i class="el${game.fild.biom[i][j]} ${del}"></i>`;
+				// biom_fild +=`<i class="el${game.fild.biom[i][j]} ${del}"></i>`;
+				// biom_fild += `<img src="img/items/item_1.PNG" height="28" width="28"  />`;
+				const index = game.fild.biom[i][j];
+				if(index !== 0){
+					biom_fild += `<img src="img/items/item_${game.fild.biom[i][j]}.png" class="${del}" height="28" width="28" />`;
+				}
+				else biom_fild +=`<i class="el${game.fild.biom[i][j]} ${del}"></i>`;
+				
 			}
 		}
 

@@ -186,6 +186,8 @@ body{min-width:100vw; min-height:100vh; font-family:sans-serif;}
 .game_box {
 	width:336px;
 	height:458px;
+	/* height: 100%; */
+	/* width: 100%; */
 	box-shadow:inset 0 0 6px 0px yellow;
 	background:#26322b;
 	font-size:8px;
@@ -299,12 +301,7 @@ body{min-width:100vw; min-height:100vh; font-family:sans-serif;}
 
 /* цвета шаров */
 .el0{color:transparent;}
-.el1{color:#3c36ff}
-.el2{color:#e418e8}
-.el3{color:#f12525}
-.el4{color:#10b620}
-.el5{color:#5ae4e0}
-.el6{color:#f3ff12}
+
 .biom_box i {
 	pointer-events:auto;
 	background:currentColor;
