@@ -9,6 +9,7 @@ game.m.game_start = function(){
 	game.status.dabl_N_key = 0;
 	game.status.dabl_G_key = 0;
 	game.score_str = 0;
+	document.querySelectorAll(".arrow").forEach(el => el.classList.remove("hidden"));
 
 	game.selectors.btn_start.style.display = 'block';
 	game.selectors.ask.style.display = 'none';
@@ -47,6 +48,7 @@ game.m.pause = function(){
 
 	if(game.status.game){
 		if(game.status.start_game) {
+			document.querySelectorAll(".arrow").forEach(el => el.classList.add("hidden"));
 			game.selectors.btn_start.style.display = 'block';
 			game.selectors.ask.style.display = 'none';
 			game.selectors.btn_start.innerHTML = 'пауза';
@@ -58,6 +60,7 @@ game.m.pause = function(){
 			clearInterval(game.interval.interval);
 		}
 		else {
+			document.querySelectorAll(".arrow").forEach(el => el.classList.remove("hidden"));
 			game.status.start_game = true;
 			if (!game.selectors.game_menu.classList.contains('ani')) {
 				game.selectors.game_menu.classList.toggle('ani');
@@ -70,6 +73,7 @@ game.m.pause = function(){
 
 // game over
 game.m.game_over = function(){
+	document.querySelectorAll(".arrow").forEach(el => el.classList.add("hidden"));
 	clearInterval(game.interval.interval);
 	game.status.start_game = false;
 	game.status.game = false;

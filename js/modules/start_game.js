@@ -3,6 +3,13 @@
 game.m.start_game = function(){
 	document.addEventListener('keydown', game.m.keys);   // прослушивание клавиш
 
+
+	// arrow moving
+	document.querySelector(".left_arrow").addEventListener("click", game.m.to_left);
+	document.querySelector(".center_arrow").addEventListener("click", game.m.to_down);
+	document.querySelector(".right_arrow").addEventListener("click", game.m.to_right);
+
+
 	game.selectors.btn_start.addEventListener('click', game.m.game_start); // начало игры
 	game.selectors.info.addEventListener('click', game.m.showInfo);        // показать меню информации
 	game.selectors.filling.addEventListener('change', game.m.setBalls);    // выбор кол-ва заполненных строк на старте
